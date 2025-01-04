@@ -1,0 +1,59 @@
+[option]
+indent = 4
+textwidth = 80
+prefix_inout = "b_"
+prefix_input = "i_"
+prefix_output = "o_"
+
+[textrules]
+style_semicolon = true
+style_textwidth = true
+style_directives = false
+header_copyright = false
+
+[syntaxrules]
+prefix_inout = true
+prefix_input = true
+prefix_output = true
+tab_character = true
+enum_with_type = true
+parameter_in_package = true
+function_with_automatic = true
+parameter_default_value = true
+parameter_explicit_type = true
+parameter_type_twostate = true
+localparam_explicit_type = true
+localparam_type_twostate = true
+package_item_not_in_package = true
+function_same_as_system_function = true
+module_identifier_matches_filename = true
+program_identifier_matches_filename = true
+interface_identifier_matches_filename = true
+
+style_trailingwhitespace = true
+style_keyword_new = true
+style_keyword_end = true
+style_keyword_0space = true
+style_keyword_newline = true
+style_keyword_0or1space = true
+style_keyword_maybelabel = true
+style_operator_integer = true
+style_operator_boolean = true
+style_operator_arithmetic = true
+style_operator_integer_leading_space = true
+style_operator_boolean_leading_space = true
+style_operator_arithmetic_leading_space = true
+
+[option.unpacked_array]
+net_declaration = true
+ref_declaration = true
+data_declaration  = true
+param_declaration  = true
+input_declaration  = true
+inout_declaration  = true
+output_declaration  = true
+intf_port_declaration  = true
+ansi_port_declaration  = true
+specparam_declaration  = true
+localparam_declaration  = true
+

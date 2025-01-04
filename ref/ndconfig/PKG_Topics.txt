@@ -1,0 +1,428 @@
+Format: Development Release 01-12-2008 (1.35 base)
+
+# This is the Natural Docs topics file for this project.  If you change anything
+# here, it will apply to THIS PROJECT ONLY.  If you'd like to change something
+# for all your projects, edit the Topics.txt in Natural Docs' Config directory
+# instead.
+
+
+# If you'd like to prevent keywords from being recognized by Natural Docs, you
+# can do it like this:
+# Ignore Keywords: [keyword], [keyword], ...
+#
+# Or you can use the list syntax like how they are defined:
+# Ignore Keywords:
+#    [keyword]
+#    [keyword], [plural keyword]
+#    ...
+
+
+#-------------------------------------------------------------------------------
+# SYNTAX:
+#
+# Alter Topic Type: [name]
+# Alter Alter Topic Type: [name]
+#    Creates a new topic type or alters one from the main file.  Each type gets
+#    its own index and behavior settings.  Its name can have letters, numbers,
+#    spaces, and these charaters: - / . '
+#
+# Plural: [name]
+#    Sets the plural name of the topic type, if different.
+#
+# Keywords:
+#    [keyword]
+#    [keyword], [plural keyword]
+#    ...
+#    Defines or adds to the list of keywords for the topic type.  They may only
+#    contain letters, numbers, and spaces and are not case sensitive.  Plural
+#    keywords are used for list topics.  You can redefine keywords found in the
+#    main topics file.
+#
+# Index: [yes|no]
+#    Whether the topics get their own index.  Defaults to yes.  Everything is
+#    included in the general index regardless of this setting.
+#
+# Scope: [normal|start|end|always global]
+#    How the topics affects scope.  Defaults to normal.
+#    normal        - Topics stay within the current scope.
+#    start         - Topics start a new scope for all the topics beneath it,
+#                    like class topics.
+#    end           - Topics reset the scope back to global for all the topics
+#                    beneath it.
+#    always global - Topics are defined as global, but do not change the scope
+#                    for any other topics.
+#
+# Class Hierarchy: [yes|no]
+#    Whether the topics are part of the class hierarchy.  Defaults to no.
+#
+# Page Title If First: [yes|no]
+#    Whether the topic's title becomes the page title if it's the first one in
+#    a file.  Defaults to no.
+#
+# Break Lists: [yes|no]
+#    Whether list topics should be broken into individual topics in the output.
+#    Defaults to no.
+#
+# Can Group With: [type], [type], ...
+#    Defines a list of topic types that this one can possibly be grouped with.
+#    Defaults to none.
+#
+# The following topics are defined in the main file, if you'd like to alter
+# their behavior or add keywords:
+#
+#    Generic, Class, Interface, Section, File, Group, Function, Variable,
+#    Property, Type, Constant, Enumeration, Event, Delegate, Example,
+#    Parameter, Typedef, Port, Usage, Subgroup, Method, Module, Program,
+#    Global, Package, Macro, Database, Database Table, Database View,
+#    Database Index, Database Cursor, Database Trigger, Cookie, Build
+#    Target
+#
+# If you add something that you think would be useful to other developers
+# and should be included in Natural Docs by default, please e-mail it to
+# topics [at] naturaldocs [dot] org.
+#
+# -----------------------------------------------------------------------------
+#
+# Topics
+# ------
+#
+# Generic, Class, Interface, Section, File, Group, Function, Variable, Property,
+# Type, Constant, Enumeration, Event, Delegate, Example, Parameter, Typedef,
+# Port, Usage, Subgroup, Method, Module, Program, Global, Package, Macro,
+# Database, Database Table, Database View, Database Index, Database Cursor,
+# Database Trigger, Cookie, Build Target
+#
+#
+# Alter Topic Type: [topic name]
+#
+#    Index: [yes|no]
+#    Scope: [normal|start|end|always global]
+#    Plural: [name]
+#    Class Hierarchy: [yes|no]
+#    Page Title If First: [yes|no]
+#    Can Group With: [type], [type], ...
+#    Break Lists: [yes|no]
+#    Keywords:
+#       [keyword]
+#       [space seperated keyword]
+#       [keyword], [plural keyword]
+#    Ignore Keywords:
+#       [keyword]
+#       [space seperated keyword]
+#       [keyword], [plural keyword]
+#
+# -----------------------------------------------------------------------------
+
+
+Alter Topic Type: File
+   Plural: Files
+   Index: yes
+   Scope: always global
+   Keywords:
+      about
+      doc, docs
+      file, files
+      script, scripts
+      header, headers
+      document, documents
+
+
+Alter Topic Type: Macro
+   Plural: Macros
+   Index: yes
+   Scope: always global
+   Keywords:
+      def, defs
+      macro, macros
+      define, defines
+
+
+Alter Topic Type: Package
+   Plural: Packages
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Page Title If First: no
+   Keywords:
+      package, packages
+      namespace, namespaces
+
+
+Alter Topic Type: Module
+   Plural: Modules
+   Index: yes
+   Scope: start
+   Class Hierarchy: yes
+   Page Title If First: yes
+   Keywords:
+      module, modules
+
+
+Topic Type: Program
+   Plural: Programs
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: no
+   Page Title If First: no
+   Keywords:
+      program, programs
+
+
+Alter Topic Type: Interface
+   Plural: Interfaces
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: yes
+   Page Title If First: yes
+   Can Group With: Abstracts, Classes
+   Keywords:
+      interface, interfaces
+      interface class, interface classes
+
+
+Topic Type: Abstract
+   Plural: Virtual Classes
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: yes
+   Page Title If First: yes
+   Can Group With: Interfaces, Classes
+   Keywords:
+      virtual class, virtual classes
+      abstract class, abstract classes
+
+
+Alter Topic Type: Class
+   Plural: Classes
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: Yes
+   Page Title If First: Yes
+   Can Group With: Interfaces, Abstracts
+   Keywords:
+      class, classes
+      concrete class, concrete classes
+
+
+Alter Topic Type: Group
+   Plural: Groups
+   Index: yes
+   Scope: normal
+   Keywords:
+      group, groups
+
+
+Topic Type: Subgroup
+   Plural: Subgroups
+   Index: yes
+   Scope: normal
+   Keywords:
+      subgroup, subgroups
+
+
+Alter Topic Type: Enumeration
+   Plural: Enums
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Types, Typedefs
+   Keywords:
+      enum, enums
+      type, types
+      typedef, typedefs
+      enumeration, enumerations
+      typedef enum, typedef enums
+
+
+Alter Topic Type: Type
+   Plural: Types
+   Index: yes
+   Scope: start
+   Break Lists: yes
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Enumerations, Typedefs
+   Keywords:
+      type, types
+      typedef, typedefs
+
+
+Topic Type: Typedef
+Alter Topic Type: Type
+   Plural: Types
+   Index: yes
+   Scope: normal
+   Break Lists: yes
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Enumerations, Types
+   Keywords:
+      typedef, typedefs
+
+
+Alter Topic Type: Parameter
+   Plural: Parameters
+   Index: yes
+   Scope: normal
+   Break Lists: no
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Constants
+   Keywords:
+      parameter, parameters
+      localparam, localparams
+
+
+Alter Topic Type: Constant
+   Plural: Constants
+   Index: yes
+   Scope: normal
+   Break Lists: no
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Parameters
+   Keywords:
+      constant, constants
+      const, consts
+
+
+Alter Topic Type: Variable
+   Plural: Variables
+   Index: no
+   Scope: normal
+   Break Lists: no
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Events, Ports
+   Keywords:
+      var, vars
+      rand var, rand vars
+      variable, variables
+      random var, random vars
+      rand variable, rand variables
+      random variable, random variables
+      integer, integers
+      int, ints
+      uint, uints
+      long, longs
+      ulong, ulongs
+      short, shorts
+      ushort, ushorts
+      byte, bytes
+      ubyte, ubytes
+      sbyte, sbytes
+      float, floats
+      double, doubles
+      real, reals
+      decimal, decimals
+      scalar, scalars
+      array, arrays
+      arrayref, arrayrefs
+      hash, hashes
+      hashref, hashrefs
+      bool, bools
+      void, voids
+      boolean, booleans
+      flag, flags
+      bit, bits
+      bitfield, bitfields
+      field, fields
+      pointer, pointers
+      ptr, ptrs
+      reference, references
+      ref, refs
+      object, objects
+      obj, objs
+      character, characters
+      wcharacter, wcharacters
+      char, chars
+      wchar, wchars
+      string, strings
+      wstring, wstrings
+      str, strs
+      wstr, wstrs
+      handle, handles
+
+
+Topic Type: Port
+   Plural: Ports
+   Index: no
+   Scope: normal
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Variables, Events
+   Keywords:
+      tlm
+      port, ports
+      socket, sockets
+      export, exports
+      import, imports
+
+
+Alter Topic Type: Event
+   Plural: Events
+   Index: no
+   Scope: normal
+   Break Lists: no
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Variables, Ports
+   Keywords:
+      event, events
+      uvm event, uvm events
+
+
+Topic Type: Method
+   Plural: Methods
+   Index: no
+   Scope: normal
+   Break Lists: no
+   Class Hierarchy: no
+   Page Title If First: no
+   Can Group With: Functions
+   Keywords:
+      sub, subs
+      task, tasks
+      proc, procs
+      func, funcs
+      method, methods
+      routine, routines
+      function, functions
+      callback, callbacks
+      procedure, procedures
+      subroutine, subroutines
+      destructor, destructors
+      constructor, constructors
+      pure method, pure methods
+      virtual task, virtual tasks
+      pure function, pure functions
+      virtual method, virtual methods
+      virtual function, virtual functions
+
+
+Alter Topic Type: Function
+   plural: methods
+   index: no
+   scope: normal
+   break lists: no
+   class hierarchy: no
+   page title if first: no
+   can group with: methods
+   keywords:
+      sub, subs
+      proc, procs
+      func, funcs
+      method, methods
+      routine, routines
+      function, functions
+      callback, callbacks
+      procedure, procedures
+      subroutine, subroutines
+      destructor, destructors
+      constructor, constructors

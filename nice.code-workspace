@@ -1,0 +1,71 @@
+{
+
+    "folders": [
+        {
+            "path": ".",
+            "name": "workspace-root"
+        },
+        {
+            "path": "./scripts",
+            "name": "scripts"
+
+        },
+        {
+            "path": "src/sv/nice_pkg",
+            "name": "pkg"
+        },
+        {
+            "path": "src/sv/nice_top",
+            "name": "top"
+        },
+        {
+            "path": "vendor/target/uvm_pkg/src",
+            "name": "uvm"
+        },
+    ],
+
+    "settings": {
+        "verible.arguments": [
+            "--flagfile=verible.flags",
+        ],
+        "files.associations": {
+            "*.v": "systemverilog",
+            "*.sv": "systemverilog",
+            "*.svh": "systemverilog",
+            "*.def": "systemverilog",
+            "*.list": "buildconfig",
+            "*.flist": "buildconfig",
+            "*.filelist": "buildconfig",
+        },
+        "verilog.linting.iverilog.includePath": [
+            "-Isrc/sv/nice_pkg",
+            "-Ivendor/target/uvm_pkg/src",
+            "-Isrc/sv/nice_top"
+        ],
+        "systemverilog.antlrVerification": true,
+        "systemverilog.compileOnOpen": true,
+        "systemverilog.compilerType": "Verible",
+        "systemverilog.verifyOnOpen": true,
+        "verilog.linting.verilator.arguments": "$(bender script verilator)",
+        "svls-vscode.svlintToml.path": "/.svlint.toml",
+        "verilog.languageServer.svls.enabled": true,
+        "systemverilog.launchConfigurationVerilator": "verilator --sv --lint-only --language 1800-2017 --Wall",
+        "verilog.linting.linter": "slang",
+        "verilog.linting.verilator.includePath": [
+            "src/sv/nice_pkg",
+            "src/sv/nice_top",
+            "vendor/target/uvm_pkg/src"
+        ],
+        "verilog.formatting.veribleVerilogFormatter.arguments": "--flagfile=verible.flags",
+        "verilog.languageServer.veribleVerilogLs.arguments": "--flagfile=verible.flags",
+        "systemverilog.formatCommand": "verible-verilog-format --flagfile=./verible.flags",
+        "systemverilog.launchConfigurationVerible": "verible-verilog-lint --flagfile=verible.flags",
+        "verilog.languageServer.veribleVerilogLs.enabled": true,
+        "verilog.languageServer.veribleVerilogLs.path": "verible-verilog-ls",
+        "verilog.formatting.verilogHDL.formatter": "verible-verilog-format",
+        "verilog.linting.iverilog.runAtFileLocation": true,
+        "verilog.linting.iverilog.arguments": "-sv",
+        "verilog.linting.slang.arguments": "--std latest $(bender script flist-plus)"
+    }
+}
+

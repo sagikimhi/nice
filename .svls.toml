@@ -1,0 +1,6 @@
+[verilog]
+include_paths = ["src/sv/nice_pkg", "src/sv/nice_top", "vendor/uvm_pkg/src"]
+
+
+[option]
+linter = true

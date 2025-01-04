@@ -1,0 +1,22 @@
+# Exclude All
+*
+
+!*/
+
+!.gitignore
+!.svls.toml
+!.svlint.toml
+
+!LICENSE
+!README.md
+!Bender.yml
+!pyproject.toml
+!nice.code-workspace
+
+!ref/**/*
+!sim/**/*
+!src/**/*
+!scripts/*
+
+src/nice.egg-info
+vendor
