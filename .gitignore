@@ -3,6 +3,7 @@
 
 !*/
 !ref/**/*
+!src/**/*
 !scripts/*
 
 !.gitignore
