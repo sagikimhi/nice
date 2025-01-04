@@ -1,0 +1,44 @@
+# Package metadata. Required.
+#
+package:
+  name: nice
+  authors: 
+    - "Sagi Kimhi <sagi.kim5@gmail.com>"
+
+dependencies:
+  uvm_pkg: {git: "git@github.com:accellera-official/uvm-core.git", rev: 78c06547a2a0a29b3dc9dcafae62b75b2ff61544}
+
+plugins:
+  nice_dockerdocs: scripts/docker_build_docs.sh
+
+export_include_dirs:
+  - src
+
+workarea:
+  package_links:
+    uvm_pkg: uvm_pkg
+    checkout_dir: deps
+
+sources:
+  - include_dirs:
+      - src
+      - deps/uvm_pkg/src
+    files:
+      - src/pss_cmn_defines.svh
+      - src/nice_pkg.sv
+      - include_dirs:
+          - src/io
+          - src/seq
+          - src/misc
+          - src/patterns
+          - src/collections
+          - src/components
+        files:
+          - "src/io/nice_io.svh"
+          - "src/seq/nice_seq.svh"
+          - "src/misc/nice_misc.svh"
+          - "src/patterns/nice_patterns.svh"
+          - "src/components/nice_components.svh"
+          - "src/collections/nice_collections.svh"
+
+

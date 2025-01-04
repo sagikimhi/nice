@@ -1,0 +1,17 @@
+# Exclude All
+*
+
+!*/
+!ref/**/*
+!scripts/*
+
+!.gitignore
+!.svls.toml
+!.svlint.toml
+!.verible.rules
+
+!LICENSE
+!README.md
+!Bender.yml
+!Dockerfile
+!nice.code-workspace

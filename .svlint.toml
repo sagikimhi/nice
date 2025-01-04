@@ -1,0 +1,58 @@
+[option]
+indent = 4
+textwidth = 90
+exclude_paths = [ "distrib", "pss_cmn_ref", "pss_cmn_sim/sim", ".gitlab", "scripts"]
+
+[textrules]
+header_copyright = false
+style_directives = false
+style_textwidth = true
+style_semicolon = true
+
+[rules]
+style_commaleading = true
+blocking_assignment_in_always_ff = true
+default_nettype_none = false
+enum_with_type = true
+generate_for_with_label = true
+generate_if_with_label = true
+generate_keyword_required = false
+genvar_declaration_in_loop = true
+genvar_declaration_out_loop = false
+inout_with_tri = false
+input_with_var = false
+interface_port_with_modport = false
+legacy_always = false
+non_blocking_assignment_in_always_comb = true
+output_with_var = false
+priority_keyword = false
+tab_character = true
+unique0_keyword = false
+unique_keyword = false
+case_default = true
+explicit_case_default = true
+function_same_as_system_function = true
+function_with_automatic = true
+interface_identifier_matches_filename = true
+localparam_explicit_type = true
+localparam_type_twostate = true
+loop_variable_declaration = true
+package_item_not_in_package = true
+parameter_default_value = true
+parameter_explicit_type = true
+parameter_in_package = true
+program_identifier_matches_filename = true
+
+[option.unpacked_array]
+localparam_declaration  = true
+param_declaration  = true
+specparam_declaration  = true
+inout_declaration  = true
+ansi_port_declaration  = true
+input_declaration  = true
+output_declaration  = true
+intf_port_declaration  = true
+ref_declaration  = true
+data_declaration  = true # enabled by default
+net_declaration = true
+

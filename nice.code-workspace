@@ -1,0 +1,42 @@
+{
+
+    "folders": [
+        {
+            "path": ".",
+            "name": "workspace-root"
+        },
+        {
+            "path": "../sp-parquet-uvc",
+            "name": "SP-Parquet-UVC"
+        },
+        {
+            "path": "../sp-parquet-uvc-private/sp_parquet_pkg/hvl",
+            "name": "SP-Parquet-Impl"
+        },
+        {
+            "path": "/home/skimhi/.project/git/frameworks/uvm-1.2/distrib/src",
+            "name": "uvm-pkg"
+        },
+        {
+            "path": "./pss_cmn_sim/rtl",
+            "name": "top"
+        },
+        {
+            "path": "./pss_cmn_dpi_cpp",
+            "name": "dpi"
+        },
+        {
+            "path": "./pss_cmn_pkg/hvl",
+            "name": "pkg"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.sv": "systemverilog",
+            "*.svh": "systemverilog",
+            "*.list": "buildconfig",
+            "*.def": "systemverilog"
+        }
+    }
+}
+

@@ -1,0 +1,432 @@
+Format: 2.3
+
+#-------------------------------------------------------------------------------
+#
+# This is the Natural Docs topics file for this project.  If you change anything
+# here, it will apply to THIS PROJECT ONLY.  If you'd like to change something
+# for all your projects, edit the Topics.txt in Natural Docs' Config directory
+# instead.
+#
+# If you'd like to prevent keywords from being recognized by Natural Docs, you
+# can do it like this:
+# Ignore Keywords: [keyword], [keyword], ...
+#
+# Or you can use the list syntax like how they are defined:
+# Ignore Keywords:
+#    [keyword]
+#    [keyword], [plural keyword]
+#    ...
+#
+# SYNTAX:
+#
+# Alter Comment Type: [name]
+# Alter Alter Comment Type: [name]
+#    Creates a new topic type or alters one from the main file.  Each type gets
+#    its own index and behavior settings.  Its name can have letters, numbers,
+#    spaces, and these charaters: - / . '
+#
+# Plural Display Name: [name]
+#    Sets the plural name of the topic type, if different.
+#
+# Keywords:
+#    [keyword]
+#    [keyword], [plural keyword]
+#    ...
+#    Defines or adds to the list of keywords for the topic type.  They may only
+#    contain letters, numbers, and spaces and are not case sensitive.  Plural
+#    keywords are used for list topics.  You can redefine keywords found in the
+#    main topics file.
+#
+# Index: [yes|no]
+#    Whether the topics get their own index.  Defaults to yes.  Everything is
+#    included in the general index regardless of this setting.
+#
+# Scope: [normal|start|end|always global]
+#    How the topics affects scope.  Defaults to normal.
+#    normal        - Topics stay within the current scope.
+#    start         - Topics start a new scope for all the topics beneath it,
+#                    like class topics.
+#    end           - Topics reset the scope back to global for all the topics
+#                    beneath it.
+#    always global - Topics are defined as global, but do not change the scope
+#                    for any other topics.
+#
+# Class Hierarchy: [yes|no]
+#    Whether the topics are part of the class hierarchy.  Defaults to no.
+#
+# Page Title If First: [yes|no]
+#    Whether the topic's title becomes the page title if it's the first one in
+#    a file.  Defaults to no.
+#
+# Break Lists: [yes|no]
+#    Whether list topics should be broken into individual topics in the output.
+#    Defaults to no.
+#
+# Can Group With: [type], [type], ...
+#    Defines a list of topic types that this one can possibly be grouped with.
+#    Defaults to none.
+#
+# The following topics are defined in the main file, if you'd like to alter
+# their behavior or add keywords:
+#
+#    Generic, Class, Interface, Section, File, Group, Function, Variable,
+#    Property, Type, Constant, Enumeration, Event, Delegate, Example,
+#    Parameter, Typedef, Port, Usage, Subgroup, Method, Module, Program,
+#    Global, Package, Macro, Database, Database Table, Database View,
+#    Database Index, Database Cursor, Database Trigger, Cookie, Build
+#    Target
+#
+# If you add something that you think would be useful to other developers
+# and should be included in Natural Docs by default, please e-mail it to
+# topics [at] naturaldocs [dot] org.
+#
+# -----------------------------------------------------------------------------
+#
+# Topics
+# ------
+#
+# Generic, Class, Interface, Section, File, Group, Function, Variable, Property,
+# Type, Constant, Enumeration, Event, Delegate, Example, Parameter, Typedef,
+# Port, Usage, Subgroup, Method, Module, Program, Global, Package, Macro,
+# Database, Database Table, Database View, Database Index, Database Cursor,
+# Database Trigger, Cookie, Build Target
+#
+#
+# Alter Comment Type: [topic name]
+#    Display Name: [name]
+#    Plural Display Name: [name]
+#    Simple Identifier: [name]
+#    Scope: [normal|start|end|always global]
+#    Flags: [flag], [flag:=Code, File, Documentation, Varible Type, Class Hierarchy, Enum]...
+#    Keywords:
+#       [keyword]
+#       [space seperated keyword]
+#       [keyword], [plural keyword]
+#    Ignore Keywords:
+#       [keyword]
+#       [space seperated keyword]
+#       [keyword], [plural keyword]
+#
+# -----------------------------------------------------------------------------
+
+
+Alter Comment Type: File
+   Display Name: File
+   Simple Identifier: File
+   Plural Display Name: Files
+   Scope: always global
+   Flags: File
+   Keywords:
+      doc, docs
+      file, files
+      script, scripts
+      header, headers
+      document, documents
+
+
+Alter Comment Type: Macro
+   Display Name: Macro
+   Simple Identifier: Macro
+   Plural Display Name: Macros
+   Scope: always global
+   Flags: Code
+   Keywords:
+      def, defs
+      macro, macros
+      define, defines
+
+
+Alter Comment Type: Module
+   Display Name: Module
+   Simple Identifier: Module
+   Plural Display Name: Modules
+   Scope: start
+   Flags: Code, Class Hierarchy
+   Keywords:
+      module, modules
+
+
+Alter Comment Type: Package
+   Display Name: Package
+   Simple Identifier: Package
+   Plural Display Name: Packages
+   Scope: start
+   Flags: Code
+   Keywords:
+      package, packages
+      namespace, namespaces
+
+
+Comment Type: Program
+   Display Name: Program
+   Simple Identifier: Program
+   Plural Display Name: Programs
+   Scope: Start
+   Flags: Code
+   Keywords:
+      program, programs
+
+
+Alter Comment Type: Interface
+   Display Name: Interface
+   Simple Identifier: Interface
+   Plural Display Name: Interfaces
+   Scope: start
+   Flags: Code, Class Hierarchy, Variable Type
+   Keywords:
+      interface, interfaces
+      interface class, interface classes
+
+
+Comment Type: Abstract
+   Display Name: Abstract Class
+   Plural Display Name: Abstract Classes
+   Scope: start
+   Flags: Code, Class Hierarchy, Variable Type
+   Keywords:
+      virtual class, virtual classes
+      abstract class, abstract classes
+
+
+Alter Comment Type: Class
+   Display Name: Class
+   Simple Identifier: Class
+   Plural Display Name: Classes
+   Scope: start
+   Flags: Code, Class Hierarchy, Variable Type
+   Keywords:
+      class, classes
+      concrete class, concrete classes
+
+
+Alter Comment Type: Group
+   Display Name: Group
+   Simple Identifier: Group
+   Plural Display Name: Groups
+   Scope: normal
+   Flags: Documentation
+   Keywords:
+      group, groups
+
+
+Comment Type: Subgroup
+   Display Name: Subgroup
+   Simple Identifier: Subgroup
+   Plural Display Name: Subgroups
+   Scope: normal
+   Flags: Documentation
+   Keywords:
+      subgroup, subgroups
+
+
+Alter Comment Type: Enumeration
+   Display Name: Enum
+   Simple Identifier: Enum
+   Plural Display Name: Enums
+   Scope: normal
+   Flags: Code, Enum, Variable Type
+   Keywords:
+      enum, enums
+      enumeration, enumerations
+
+
+Alter Comment Type: Type
+   Display Name: Type
+   Simple Identifier: Type
+   Plural Display Name: Types
+   Scope: normal
+   Flags: Variable Type
+   Keywords:
+      type, types
+      typedef, typedefs
+      parameter type, type parameters
+
+
+Comment Type: Typedef
+Alter Comment Type: Type
+   Display Name: Typedef
+   Simple Identifier: Typedef
+   Plural Display Name: Typedefs
+   Scope: normal
+   Flags: Variable Type
+   Keywords:
+      typedef, typedefs
+
+
+Alter Comment Type: Parameter
+   Display Name: Parameter
+   Simple Identifier: Parameter
+   Plural Display Name: Parameters
+   Scope: normal
+   Flags: Code
+   Keywords:
+      parameter, parameters
+      localparam, localparams
+
+
+Alter Comment Type: Constant
+   Display Name: Constant
+   Simple Identifier: Constant
+   Plural Display Name: Constants
+   Scope: normal
+   Flags: Code
+   Keywords:
+      constant, constants
+      const, consts
+
+
+Alter Comment Type: Variable
+   Display Name: Variable
+   Simple Identifier: Variable
+   Plural Display Name: Variables
+   Scope: normal
+   Flags: Code
+   Keywords:
+      var, vars
+      rand var, rand vars
+      variable, variables
+      random var, random vars
+      rand variable, rand variables
+      random variable, random variables
+      integer, integers
+      int, ints
+      uint, uints
+      long, longs
+      ulong, ulongs
+      short, shorts
+      ushort, ushorts
+      byte, bytes
+      ubyte, ubytes
+      sbyte, sbytes
+      float, floats
+      double, doubles
+      real, reals
+      decimal, decimals
+      scalar, scalars
+      array, arrays
+      arrayref, arrayrefs
+      hash, hashes
+      hashref, hashrefs
+      bool, bools
+      void, voids
+      boolean, booleans
+      flag, flags
+      bit, bits
+      bitfield, bitfields
+      field, fields
+      pointer, pointers
+      ptr, ptrs
+      reference, references
+      ref, refs
+      object, objects
+      obj, objs
+      character, characters
+      wcharacter, wcharacters
+      char, chars
+      wchar, wchars
+      string, strings
+      wstring, wstrings
+      str, strs
+      wstr, wstrs
+      handle, handles
+
+
+Comment Type: Port
+   Display Name: Port
+   Simple Identifier: Port
+   Plural Display Name: Ports
+   Scope: normal
+   Flags: Code
+   Keywords:
+      tlm
+      port, ports
+      socket, sockets
+      export, exports
+      import, imports
+
+
+Alter Comment Type: Event
+   Display Name: Event
+   Simple Identifier: Event
+   Plural Display Name: Events
+   Scope: normal
+   Flags: Code
+   Keywords:
+      event, events
+      uvm event, uvm events
+
+
+Comment Type: Method
+   Display Name: Method
+   Simple Identifier: Method
+   Plural Display Name: Methods
+   Scope: normal
+   Flags: Code
+   Keywords:
+      sub, subs
+      task, tasks
+      proc, procs
+      func, funcs
+      method, methods
+      routine, routines
+      function, functions
+      callback, callbacks
+      procedure, procedures
+      subroutine, subroutines
+      destructor, destructors
+      constructor, constructors
+      pure method, pure methods
+      virtual task, virtual tasks
+      pure function, pure functions
+      virtual method, virtual methods
+      virtual function, virtual functions
+
+
+Alter Comment Type: Function
+   Display Name: Method
+   Simple Identifier: Function
+   Plural Display Name: Function
+   Scope: normal
+   Flags: Code
+   keywords:
+      sub, subs
+      proc, procs
+      func, funcs
+      method, methods
+      routine, routines
+      function, functions
+      callback, callbacks
+      procedure, procedures
+      subroutine, subroutines
+      destructor, destructors
+      constructor, constructors
+
+
+Alter Comment Type: Section
+   Display Name: Section
+   Simple Identifier: Section
+   Plural Display Name: Sections
+   Scope: always global
+   Flags: Documentation
+   Keywords:
+      section, sections
+
+
+Comment Type: Usage
+   Display Name: Usage
+   Simple Identifier: Usage
+   Plural Display Name: Usages
+   Scope: normal
+   Flags: Documentation
+   Keywords:
+      usage, usages
+
+
+Comment Type: Example
+   Display Name: Example
+   Simple Identifier: Example
+   Plural Display Name: Examples
+   Scope: normal
+   Flags: Documentation
+   Keywords:
+      example, examples
