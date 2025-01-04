@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ins",["Function"],[["insert",,[["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.insert","SystemVerilogClass:collections.deque:insert"]]]]);

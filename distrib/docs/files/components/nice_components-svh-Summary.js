@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:components/nice_components.svh","nice_components.svh");NDSummary.OnSummaryLoaded("File:components/nice_components.svh",[["SystemVerilog","SystemVerilog"]],[["Groups","Group"],["Packages","Package"],["Types","Type"]],[[1,0,1,"components","components"],[2,0,0,"Types","components.Types"],[3,0,2,"broadcaster","components.broadcaster"]]);

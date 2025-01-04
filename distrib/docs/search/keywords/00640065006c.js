@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("del",["Function"],[["delete",,[["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.delete","SystemVerilogClass:collections.deque:delete"]]]]);

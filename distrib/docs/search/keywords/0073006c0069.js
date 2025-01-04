@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sli",["Function"],[["slice",,[["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.slice","SystemVerilogClass:collections.deque:slice"]]]]);

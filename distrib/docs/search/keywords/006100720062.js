@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("arb",["Function"],[["arbitration",,[["seq:: .chained_sequencer:: ",,,,0,"File:seq/nice_chained_sequencer.svh:seq.chained_sequencer.arbitration","SystemVerilogClass:seq.chained_sequencer:arbitration"]]]]);

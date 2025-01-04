@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("flu",["Function"],[["flush",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.flush","SystemVerilogClass:io.file:flush"],["io:: .stream:: ",,,,0,"File:io/api/nice_stream.svh:io.stream.flush","SystemVerilogClass:io.stream:flush"]]]]);

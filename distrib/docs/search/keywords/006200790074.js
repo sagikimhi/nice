@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("byt",["Function"],[["bytes_read",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.bytes_read","SystemVerilogClass:io.file:bytes_read"]]],["bytes_unread",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.bytes_unread","SystemVerilogClass:io.file:bytes_unread"]]]]);

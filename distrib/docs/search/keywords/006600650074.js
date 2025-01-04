@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("fet",["Method"],[["fetch_downstream",,[["seq:: .chained_sequencer:: ",,,,0,"File:seq/nice_chained_sequencer.svh:seq.chained_sequencer.fetch_downstream","SystemVerilogClass:seq.chained_sequencer:fetch_downstream"]]]]);

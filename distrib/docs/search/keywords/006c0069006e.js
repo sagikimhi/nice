@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("lin",["Function"],[["line",,[["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.line","SystemVerilogClass:io.file_reader:line"]]],["lines",,[["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.lines","SystemVerilogClass:io.file_reader:lines"]]]]);

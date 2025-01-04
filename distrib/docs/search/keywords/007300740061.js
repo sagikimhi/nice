@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sta",["Function"],[["start",,[["patterns:: .enum_iterator:: ",,,,0,"File:patterns/iterators/nice_enum_iterator.svh:patterns.enum_iterator.start","SystemVerilogClass:patterns.enum_iterator:start"]]]]);

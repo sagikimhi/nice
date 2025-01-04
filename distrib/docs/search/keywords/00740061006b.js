@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("tak",["Function"],[["take",,[["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.take","SystemVerilogClass:collections.deque:take"]]]]);

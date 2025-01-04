@@ -1,10 +1,7 @@
 # Exclude All
-*
+**/*
 
 !*/
-!ref/**/*
-!src/**/*
-!scripts/*
 
 !.gitignore
 !.svls.toml
@@ -16,3 +13,9 @@
 !Bender.yml
 !Dockerfile
 !nice.code-workspace
+
+!ref/**/*
+!src/**/*
+!scripts/*
+!distrib/docs/**/*
+

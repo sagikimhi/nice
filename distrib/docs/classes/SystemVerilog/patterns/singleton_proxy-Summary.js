@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogClass:patterns.singleton_proxy","singleton_proxy");NDSummary.OnSummaryLoaded("SystemVerilogClass:patterns.singleton_proxy",[["SystemVerilog","SystemVerilog"]],[["Classes","Class"]],[[162,0,0,"<span class=\"Qualifier\">patterns::</span>&#8203;singleton_proxy"]]);

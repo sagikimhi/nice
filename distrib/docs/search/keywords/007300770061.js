@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("swa",["Function"],[["swap",,[["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.swap","SystemVerilogClass:collections.deque:swap"]]]]);

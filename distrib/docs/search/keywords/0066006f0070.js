@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("fop",["Function"],[["fopen",,[[,,,,0,"File:io/nice_io.svh:fopen"]]]]);

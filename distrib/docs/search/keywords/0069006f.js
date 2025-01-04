@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("io",["Package"],[["io",,[[,,,,0,"File:io/nice_io.svh:io","SystemVerilogPackage:io"]]]]);

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("sin",["Class","Type"],[["singleton_proxy",,[["patterns",,,,0,"File:patterns/proxies/nice_singleton_proxy.svh:patterns.singleton_proxy","SystemVerilogClass:patterns.singleton_proxy"],["patterns:: ",,,,1,"File:patterns/nice_patterns.svh:patterns.singleton_proxy","SystemVerilogPackage:patterns:singleton_proxy"]]]]);

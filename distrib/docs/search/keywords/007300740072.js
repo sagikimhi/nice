@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("str",["Interface","Type"],[["stream",,[["io",,,,0,"File:io/api/nice_stream.svh:io.stream","SystemVerilogClass:io.stream"],[,,,,1,"File:io/nice_io.svh:stream"]]],["string_cmdline_arg",,[["io:: .cmdline_arg:: ",,,,1,"File:io/nice_io_cmdline_arg.svh:io.cmdline_arg.string_cmdline_arg","SystemVerilogClass:io.cmdline_arg:string_cmdline_arg"]]]]);

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("whe",["Enumeration"],[["whence_enum",,[[,,,,0,"File:io/nice_io.svh:whence_enum"]]]]);

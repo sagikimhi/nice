@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("mod",["Function"],[["mode",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.mode","SystemVerilogClass:io.file:mode"],["io:: .stream:: ",,,,0,"File:io/api/nice_stream.svh:io.stream.mode","SystemVerilogClass:io.stream:mode"]]]]);

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("bod",["Method"],[["body",,[["seq:: .chaining_sequence:: ",,,,0,"File:seq/nice_chaining_sequence.svh:seq.chaining_sequence.body","SystemVerilogClass:seq.chaining_sequence:body"]]]]);

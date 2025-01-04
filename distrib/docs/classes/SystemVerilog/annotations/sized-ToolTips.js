@@ -1,0 +1,1 @@
+﻿NDContentPage.OnToolTipsLoaded({102:"<div class=\"NDToolTip TFunction LSystemVerilog\"><div id=\"NDPrototype102\" class=\"NDPrototype\"><div class=\"PSection PPlainSection\"><span class=\"SHKeyword\">pure virtual function int</span> size()</div></div><div class=\"TTSummary\">Returns the current size of the container.</div></div>"});

@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("enu",["Class","Type"],[["enum_iterator",,[["patterns",,,,0,"File:patterns/iterators/nice_enum_iterator.svh:patterns.enum_iterator","SystemVerilogClass:patterns.enum_iterator"],["patterns:: ",,,,1,"File:patterns/nice_patterns.svh:patterns.enum_iterator","SystemVerilogPackage:patterns:enum_iterator"]]]]);

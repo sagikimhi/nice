@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("rew",["Function"],[["rewind",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.rewind","SystemVerilogClass:io.file:rewind"],["io:: .stream:: ",,,,0,"File:io/api/nice_stream.svh:io.stream.rewind","SystemVerilogClass:io.stream:rewind"]]]]);

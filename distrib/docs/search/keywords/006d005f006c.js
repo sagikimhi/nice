@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("m_l",["Variable"],[["m_lines",,[["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.m_lines","SystemVerilogClass:io.file_reader:m_lines"]]]]);

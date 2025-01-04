@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ope",["Function"],[["open",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.open","SystemVerilogClass:io.file:open"],["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.open","SystemVerilogClass:io.file_reader:open"]]]]);

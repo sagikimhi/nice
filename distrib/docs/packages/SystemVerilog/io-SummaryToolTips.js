@@ -1,0 +1,1 @@
+﻿NDSummary.OnToolTipsLoaded("SystemVerilogPackage:io",{377:"<div class=\"NDToolTip TPackage LSystemVerilog\"><div id=\"NDPrototype377\" class=\"NDPrototype\"><div class=\"PSection PPlainSection\"><span class=\"SHKeyword\">package</span> io</div></div><div class=\"TTSummary\">Provides various facillities for handling I/O.</div></div>"});

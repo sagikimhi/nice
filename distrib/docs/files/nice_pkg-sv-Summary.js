@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:nice_pkg.sv","nice_pkg.sv");NDSummary.OnSummaryLoaded("File:nice_pkg.sv",[["SystemVerilog","SystemVerilog"]],[["Packages","Package"]],[[502,0,0,"nice_pkg","nice_pkg"]]);

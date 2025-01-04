@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("eof",["Function","Constant"],[["eof",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.eof","SystemVerilogClass:io.file:eof"],["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.eof","SystemVerilogClass:io.file_reader:eof"],[,"EOF",,,1,"File:io/nice_io.svh:EOF"]]]]);

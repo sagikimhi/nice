@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("buf",["Type","Function"],[["buffer",,[["collections:: ",,,,0,"File:collections/nice_collections.svh:collections.buffer","SystemVerilogPackage:collections:buffer"],["io:: .file_reader:: ",,,,1,"File:io/nice_io_file_reader.svh:io.file_reader.buffer","SystemVerilogClass:io.file_reader:buffer"]]]]);
