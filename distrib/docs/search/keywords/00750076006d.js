@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("uvm",["Type"],[["uvm_port_t",,[["components:: .broadcaster:: ",,,,0,"File:components/nice_components_broadcaster.svh:components.broadcaster.uvm_port_t","SystemVerilogClass:components.broadcaster:uvm_port_t"]]]]);

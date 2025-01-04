@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("mis",["Package"],[["misc",,[[,,,,0,"File:misc/nice_misc.svh:misc","SystemVerilogPackage:misc"]]]]);

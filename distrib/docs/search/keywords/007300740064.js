@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("std",["Constant"],[["stderr",,[[,,,,0,"File:io/nice_io.svh:stderr"]]],["stdin",,[[,,,,0,"File:io/nice_io.svh:stdin"]]],["stdout",,[[,,,,0,"File:io/nice_io.svh:stdout"]]]]);

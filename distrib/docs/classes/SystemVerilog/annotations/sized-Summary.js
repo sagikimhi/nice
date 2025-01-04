@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogClass:annotations.sized","sized");NDSummary.OnSummaryLoaded("SystemVerilogClass:annotations.sized",[["SystemVerilog","SystemVerilog"]],[["methods","Function"],["Groups","Group"],["Interfaces","Interface"]],[[100,0,2,"<span class=\"Qualifier\">annotations::</span>&#8203;sized"],[101,0,1,"methods","methods"],[102,0,0,"size","size"]]);

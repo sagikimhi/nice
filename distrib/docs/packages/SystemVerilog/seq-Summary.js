@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogPackage:seq","seq");NDSummary.OnSummaryLoaded("SystemVerilogPackage:seq",[["SystemVerilog","SystemVerilog"]],[["Groups","Group"],["Packages","Package"],["Types","Type"]],[[96,0,1,"seq"],[97,0,0,"Types","Types"],[98,0,2,"chained_sequencer","chained_sequencer"],[99,0,2,"chaining_sequence","chaining_sequence"]]);

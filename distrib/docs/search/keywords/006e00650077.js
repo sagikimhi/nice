@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("new",["Function"],[["new",,[["misc:: .uid_object:: ",,,,0,"File:misc/nice_uid_object.svh:misc.uid_object.new","SystemVerilogClass:misc.uid_object:new"]]]]);

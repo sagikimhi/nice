@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("err",["Function"],[["error_string",,[["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.error_string","SystemVerilogClass:io.file_reader:error_string"]]]]);

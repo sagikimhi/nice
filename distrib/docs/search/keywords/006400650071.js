@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("deq",["Class","Type"],[["deque",,[["collections",,,,0,"File:collections/nice_deque.svh:collections.deque","SystemVerilogClass:collections.deque"],["collections:: ",,,,1,"File:collections/nice_collections.svh:collections.deque","SystemVerilogPackage:collections:deque"]]]]);

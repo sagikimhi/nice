@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("SystemVerilogPackage:misc","misc");NDSummary.OnSummaryLoaded("SystemVerilogPackage:misc",[["SystemVerilog","SystemVerilog"]],[["Groups","Group"],["Packages","Package"],["Types","Type"]],[[332,0,1,"misc"],[333,0,0,"Utility Classes","Utility_Classes"],[334,0,2,"uid_object","uid_object"]]);

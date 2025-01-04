@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("cfg",["Variable","Function"],[["cfg",,[["io:: .file_reader:: ",,,,0,"File:io/nice_io_file_reader.svh:io.file_reader.cfg","SystemVerilogClass:io.file_reader:cfg"],["seq:: .chained_sequencer:: ",,,,1,"File:seq/nice_chained_sequencer.svh:seq.chained_sequencer.cfg","SystemVerilogClass:seq.chained_sequencer:cfg"]]]]);

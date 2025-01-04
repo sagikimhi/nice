@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("for",["Function"],[["format",,[["io:: .cmdline_arg:: ",,,,0,"File:io/nice_io_cmdline_arg.svh:io.cmdline_arg.format","SystemVerilogClass:io.cmdline_arg:format"]]]]);

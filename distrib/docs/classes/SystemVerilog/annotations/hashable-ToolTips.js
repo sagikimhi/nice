@@ -1,0 +1,1 @@
+﻿NDContentPage.OnToolTipsLoaded({105:"<div class=\"NDToolTip TFunction LSystemVerilog\"><div id=\"NDPrototype105\" class=\"NDPrototype\"><div class=\"PSection PPlainSection\"><span class=\"SHKeyword\">pure virtual function int</span> hash()</div></div><div class=\"TTSummary\">Returns an integer hash value.</div></div>"});

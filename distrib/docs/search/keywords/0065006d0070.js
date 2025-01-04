@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("emp",["Function"],[["empty",,[[,,,,0,"File:collections/nice_set.svh:empty"],["collections:: .deque:: ",,,,0,"File:collections/nice_deque.svh:collections.deque.empty","SystemVerilogClass:collections.deque:empty"]]]]);

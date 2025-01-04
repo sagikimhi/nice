@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("bre",["Function"],[["break_chain",,[["seq:: .chained_sequencer:: ",,,,0,"File:seq/nice_chained_sequencer.svh:seq.chained_sequencer.break_chain","SystemVerilogClass:seq.chained_sequencer:break_chain"]]]]);

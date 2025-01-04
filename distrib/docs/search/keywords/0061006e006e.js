@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("ann",["Package"],[["annotations",,[[,,,,0,"File:collections/nice_collections.svh:annotations","SystemVerilogPackage:annotations"]]]]);

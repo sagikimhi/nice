@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("upd",["Function"],[["update",,[[,,,,0,"File:collections/nice_set.svh:update"],["collections:: .unordered_collection:: ",,,,0,"File:collections/api/nice_unordered_collection.svh:collections.unordered_collection.update","SystemVerilogClass:collections.unordered_collection:update"]]]]);

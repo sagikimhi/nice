@@ -1,0 +1,1 @@
+﻿NDSearch.OnPrefixDataLoaded("tel",["Function"],[["tell",,[["io:: .file:: ",,,,0,"File:io/nice_io_file.svh:io.file.tell","SystemVerilogClass:io.file:tell"]]]]);

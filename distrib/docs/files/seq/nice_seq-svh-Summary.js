@@ -1,0 +1,1 @@
+﻿NDFramePage.OnPageTitleLoaded("File:seq/nice_seq.svh","nice_seq.svh");NDSummary.OnSummaryLoaded("File:seq/nice_seq.svh",[["SystemVerilog","SystemVerilog"]],[["Groups","Group"],["Packages","Package"],["Types","Type"]],[[96,0,1,"seq","seq"],[97,0,0,"Types","seq.Types"],[98,0,2,"chained_sequencer","seq.chained_sequencer"],[99,0,2,"chaining_sequence","seq.chaining_sequence"]]);
