@@ -93,55 +93,55 @@ function directory_exists {
 }
 
 function prepare {
-    echo "Preparing temporary work directory..." | tee -a ${SCRIPT_LOG}
+    echo "Preparing temporary work directory..."
     if directory_exists ${PKG_DOCS}; then
-        sudo rm -rf ${PKG_DOCS} 1>> ${SCRIPT_LOG}
+        rm -rf ${PKG_DOCS} 1>> ${SCRIPT_LOG}
     fi
     mkdir -p ${DISTRIB_ND_CFG} 1>> ${SCRIPT_LOG}
 }
 
 function populate {
-    echo "Populating work directory with necessary assets..." | tee -a ${SCRIPT_LOG}
-    cp -r ${PKG_SOURCE} ${DISTRIB_SOURCE} 1>> ${SCRIPT_LOG}
-    cp -r ${NATURAL_DOCS_TOPICS_CFG} ${DISTRIB_ND_TOPICS} 1>> ${SCRIPT_LOG}
-    cp -r ${NATURAL_DOCS_PROJECT_CFG} ${DISTRIB_ND_PROJECT} 1>> ${SCRIPT_LOG}
-    cp -r ${NATURAL_DOCS_LANGUAGES_CFG} ${DISTRIB_ND_LANGUAGES} 1>> ${SCRIPT_LOG}
-    cp -r ${NATURAL_DOCS_DOCKERFILE} ${DISTRIB_DOCKERFILE} 1>> ${SCRIPT_LOG}
-    tar -xzf ${NATURAL_DOCS_TARPACK} --one-top-level=${PKG_DISTRIB} 1>> ${SCRIPT_LOG}
+    echo "Populating work directory with necessary assets..."
+    cp -r ${PKG_SOURCE} ${DISTRIB_SOURCE}
+    cp -r ${NATURAL_DOCS_TOPICS_CFG} ${DISTRIB_ND_TOPICS}
+    cp -r ${NATURAL_DOCS_PROJECT_CFG} ${DISTRIB_ND_PROJECT}
+    cp -r ${NATURAL_DOCS_LANGUAGES_CFG} ${DISTRIB_ND_LANGUAGES}
+    cp -r ${NATURAL_DOCS_DOCKERFILE} ${DISTRIB_DOCKERFILE}
+    tar -xf ${NATURAL_DOCS_TARPACK} --one-top-level=${PKG_DISTRIB}
 }
 
 function build_container {
-    echo "Building documentation builder docker container..." | tee -a ${SCRIPT_LOG}
-    sudo docker build -t ${DOCKER_BUILD_NAME} ${PKG_DISTRIB} 1>> ${SCRIPT_LOG}
+    echo "Building documentation builder docker container..."
+    docker build -t ${DOCKER_BUILD_NAME} ${PKG_DISTRIB}
 }
 
 function run_container {
-    echo "Building documentation in docker container..." | tee -a ${SCRIPT_LOG}
-    sudo docker run --name ${DOCKER_BUILD_NAME} -it ${DOCKER_IMAGE_NAME} 1>> ${SCRIPT_LOG}
+    echo "Building documentation in docker container..."
+    docker run --name ${DOCKER_BUILD_NAME} -it ${DOCKER_IMAGE_NAME}
 }
 
 function extract_docs {
-    echo "Extracting documentation from docker container..." | tee -a ${SCRIPT_LOG}
-    sudo docker cp ${DOCKER_IMAGE_NAME}:/docs ${PKG_DOCS} 1>> ${SCRIPT_LOG}
-    sudo chmod -R 777 ${PKG_DOCS}
+    echo "Extracting documentation from docker container..."
+    docker cp ${DOCKER_IMAGE_NAME}:/docs ${PKG_DOCS}
+    chmod -R 777 ${PKG_DOCS}
 }
 
 function clean_up {
-    echo "Cleaning up leftovers..." | tee -a ${SCRIPT_LOG}
+    echo "Cleaning up leftovers..."
     if directory_exists ${PKG_DISTRIB}; then
-        sudo rm -rf ${PKG_DISTRIB} 1>> ${SCRIPT_LOG}
+        rm -rf ${PKG_DISTRIB}
     fi
-    sudo docker rm ${DOCKER_BUILD_NAME} 1>> ${SCRIPT_LOG}
-    sudo docker image rm ${DOCKER_IMAGE_NAME} 1>> ${SCRIPT_LOG}
+    docker rm ${DOCKER_BUILD_NAME}
+    docker image rm ${DOCKER_IMAGE_NAME}
 }
 
 function finish {
-    echo "Done." | tee -a ${SCRIPT_LOG}
-    echo "Documentation written to ${PKG_DOCS}." | tee -a ${SCRIPT_LOG}
+    echo "Done."
+    echo "Documentation written to ${PKG_DOCS}."
 }
 
 function main {
-    print_info > ${SCRIPT_LOG}
+    print_info
     prepare
     populate
     build_container
@@ -151,4 +151,4 @@ function main {
     finish
 }
 
-main
+main | tee ${SCRIPT_LOG}
