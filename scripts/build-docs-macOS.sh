@@ -1,0 +1,113 @@
+#!/bin/bash
+
+SCRIPT_NAME=`basename -s .sh $0`
+SCRIPT_ROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+SCRIPT_LOG="${SCRIPT_ROOT}/../${SCRIPT_NAME}.log"
+
+if [[ $# -lt 1 ]]; then
+    echo ""
+    echo "Usage:"
+    echo "------"
+    echo "${SCRIPT_NAME} <pkg_name>"
+    echo ""
+    echo "Options:"
+    echo "--------"
+    echo "-h -help --help   print this help menu and exit."
+    echo ""
+    exit
+fi
+
+# Package
+PKG_NAME="$1"
+PKG_ROOT="${SCRIPT_ROOT}/.."
+PKG_DOCS="${PKG_ROOT}/docs"
+PKG_SOURCE="${PKG_ROOT}/src/sv/nice_pkg"
+PKG_DISTRIB="${PKG_ROOT}/distrib"
+PKG_REFERENCE="${PKG_ROOT}/ref"
+
+# NaturalDocs References
+NATURAL_DOCS_CFG="${PKG_REFERENCE}/ndconfig-macOS"
+NATURAL_DOCS_IMAGES="${PKG_REFERENCE}/images"
+NATURAL_DOCS_TARPACK="${PKG_REFERENCE}/naturaldocs-sv-modified-macOS.tar.gz"
+NATURAL_DOCS_DOCKERFILE="${PKG_REFERENCE}/Dockerfile"
+NATURAL_DOCS_TOPICS_CFG="${NATURAL_DOCS_CFG}/PKG_Topics.txt"
+NATURAL_DOCS_PROJECT_CFG="${NATURAL_DOCS_CFG}/PKG_Project.txt"
+NATURAL_DOCS_LANGUAGES_CFG="${NATURAL_DOCS_CFG}/PKG_Languages.txt"
+
+# Distributed directories
+DISTRIB_DOCS="${PKG_DISTRIB}/docs"
+DISTRIB_SOURCE="${PKG_DISTRIB}/src"
+DISTRIB_IMAGES="${PKG_DISTRIB}/images"
+DISTRIB_DOCKERFILE="${PKG_DISTRIB}/Dockerfile"
+
+DISTRIB_ND_BIN="${PKG_DISTRIB}/naturaldocs/NaturalDocs.exe"
+DISTRIB_ND_CFG="${PKG_DISTRIB}/ndconfig"
+DISTRIB_ND_TOPICS="${DISTRIB_ND_CFG}/Topics.txt"
+DISTRIB_ND_PROJECT="${DISTRIB_ND_CFG}/Project.txt"
+DISTRIB_ND_LANGUAGES="${DISTRIB_ND_CFG}/Languages.txt"
+
+function info {
+    echo "$1" | tee -a ${SCRIPT_LOG}
+}
+
+function directory_exists {
+    if [[ -d "$1" ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+function clean {
+    if directory_exists ${PKG_DOCS}; then
+        rm -rf ${PKG_DOCS} | tee -a ${SCRIPT_LOG}
+    fi
+    if directory_exists ${PKG_DISTRIB}; then
+        rm -rf ${PKG_DISTRIB} | tee -a ${SCRIPT_LOG}
+    fi
+}
+
+function prepare {
+    mkdir -p ${DISTRIB_DOCS} | tee -a ${SCRIPT_LOG}
+    mkdir -p ${DISTRIB_ND_CFG} | tee -a ${SCRIPT_LOG}
+}
+
+function populate {
+    cp -r ${PKG_SOURCE} ${DISTRIB_SOURCE} | tee -a ${SCRIPT_LOG}
+    cp -r ${NATURAL_DOCS_TOPICS_CFG} ${DISTRIB_ND_TOPICS} | tee -a ${SCRIPT_LOG}
+    cp -r ${NATURAL_DOCS_PROJECT_CFG} ${DISTRIB_ND_PROJECT} | tee -a ${SCRIPT_LOG}
+    cp -r ${NATURAL_DOCS_LANGUAGES_CFG} ${DISTRIB_ND_LANGUAGES} | tee -a ${SCRIPT_LOG}
+    cp -r ${NATURAL_DOCS_DOCKERFILE} ${DISTRIB_DOCKERFILE} | tee -a ${SCRIPT_LOG}
+    tar -xf ${NATURAL_DOCS_TARPACK} --one-top-level=${PKG_DISTRIB} | tee -a ${SCRIPT_LOG}
+}
+
+function build {
+    mono ${DISTRIB_ND_BIN} \
+        --source ${DISTRIB_SOURCE} \
+        --output HTML ${DISTRIB_DOCS} \
+        --project-config ${DISTRIB_ND_CFG} \
+        --tab-width 4 \
+        | tee -a ${SCRIPT_LOG}
+
+    cp -r ${DISTRIB_DOCS} ${PKG_DOCS} | tee -a ${SCRIPT_LOG}
+}
+
+function main {
+    info "Cleaning up leftovers from previous run..." 
+    clean
+
+    info "Preparing temporary work directory..."
+    prepare
+
+    info "Populating work directory with necessary assets..."
+    populate
+
+    info "Building documentation..."
+    build
+
+    info "Done."
+    info "Documentation written to ${PKG_DOCS}."
+}
+
+main
+
