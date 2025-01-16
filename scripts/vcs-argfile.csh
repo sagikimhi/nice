@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/tcsh -f
 
 bender update
 bender vendor init
