@@ -1,0 +1,19 @@
+# Package Owners
+#
+# WIP, Need to separate to sub packages
+#
+# src/sv/nice_pkg                     @SagiKimhi
+# src/sv/nice_io_pkg                  @SagiKimhi
+# src/sv/nice_seq_pkg                 @SagiKimhi
+# src/sv/nice_misc_pkg                @SagiKimhi
+# src/sv/nice_patterns_pkg            @SagiKimhi
+# src/sv/nice_components_pkg          @SagiKimhi
+# src/sv/nice_collections_pkg         @SagiKimhi
+
+# Sub-Package Owners
+src/sv/nice_pkg/io                  @SagiKimhi
+src/sv/nice_pkg/seq                 @SagiKimhi
+src/sv/nice_pkg/misc                @SagiKimhi
+src/sv/nice_pkg/patterns            @SagiKimhi
+src/sv/nice_pkg/components          @SagiKimhi
+src/sv/nice_pkg/collections         @SagiKimhi

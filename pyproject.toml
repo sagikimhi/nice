@@ -1,40 +1,55 @@
+# ------------------------------------------------------------------------------
+# Project Configurations
+# ------------------------------------------------------------------------------
+
 [project]
-version = "0.0.1"
 name = "nice"
+version = "0.1.0"
 readme = "README.md"
-authors = [ {name = "Sagi Kimhi", email = "sagi.kim5@gmail.com"} ]
-maintainers = [{name = "Sagi Kimhi", email = "sagi.kim5@gmail.com"}]
-description = """nice"""
-dependencies = ["cocotb[bus]", "pyuvm", "pytest"]
-requires-python = ">=3.11"
-classifiers = ["Programming Language :: Python "]
+authors = [ { name = "Sagi Kimhi", email = "sagi.kim5@gmail.com" } ]
+maintainers = [ { name = "Sagi Kimhi", email = "sagi.kim5@gmail.com" } ]
+description = ""
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "mypy",
+    "ruff",
+    "pytest",
+    "pyupgrade",
+    "pydocstyle",
+    "pycodestyle",
+    "flake8-bugbear",
+    "flake8-simplify",
+]
+
+# ------------------------------------------------------------------------------
+# Build System Configurations
+# ------------------------------------------------------------------------------
 
 [build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-[tool.distutils.bdist_wheel]
-universal = true
+[tool.hatch.build.targets.wheel]
+packages = ["src/python/nice"]
 
-[project.optional-dependencies]
-dev = ["mypy", "black", "flake8", "ruff", "pytest-cov"]
 
-[tool.black]
-line-length = 79
-include = 'python/src'
-target-version = ["py313"]
-extend-exclude = '''(
-    .*/__pycache__/.*
-    | .venv
-    | .*/.*.egg-info
-)'''
+# ------------------------------------------------------------------------------
+# Developer Configurations
+# ------------------------------------------------------------------------------
+
+[tool.uv]
+package = true
 
 [tool.mypy]
+files = [ "src/python" ]
+python_version = "3.12"
 pretty = true
 strict = true
 color_output = true
 show_error_codes = true
 warn_unreachable = true
-python_version = "3.13"
-files = ["python/src"]
 

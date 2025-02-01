@@ -3,20 +3,29 @@
 
 !*/
 
+# common git assets
 !.gitignore
-!.svls.toml
-!.svlint.toml
-
 !LICENSE
+!Makefile
 !README.md
 !Bender.yml
-!pyproject.toml
-!nice.code-workspace
+!nice_pkg.core
+!.github/**/*
 
+# sources, tests, docs, etc.
 !ref/**/*
 !sim/**/*
-!src/**/*
+!src/sv/**/*
+!src/python/**/*
 !scripts/*
 
-src/nice.egg-info
-vendor
+# toml configurations
+!.svls.toml
+!.svlint.toml
+!pyproject.toml
+
+# IDE stuff
+!nice.code-workspace
+
+# Ignore since not ignored for some reason
+vendor/**/*
