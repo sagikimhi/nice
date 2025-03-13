@@ -247,11 +247,12 @@ extends uvm_sequencer#(DOWN_REQ);
     // -------------------------------------------------------------------------
 
     protected bit m_break_chain;
+    protected uvm_object m_config_object;
 
     virtual function void
     init();
         this.m_break_chain = 0;
-        this.set_arbitration(UVM_SEQ_ARB_STRICT_FIFO);
+        this.set_arbitration(SEQ_ARB_STRICT_FIFO);
     endfunction
 
     function void

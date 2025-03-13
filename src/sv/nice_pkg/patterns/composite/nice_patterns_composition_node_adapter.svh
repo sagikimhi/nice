@@ -9,8 +9,7 @@
 // interface class documentation.
 //
 class composition_node#(type IMP_T=uvm_sequence_base)
-extends composition_leaf#(IMP_T)
-implements composite;
+extends composition_leaf#(IMP_T);
     `nice_param_object_utils(composition_node#(IMP_T))
 
     // ---------------------------------------------------------------------------

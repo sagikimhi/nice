@@ -20,6 +20,7 @@
 // them via casting, without the requirement of a common base class.
 //
 package annotations;
+    `NICE_IMPORT_DEPENDENCIES
     import patterns::*;
 
     // Type: Iterable

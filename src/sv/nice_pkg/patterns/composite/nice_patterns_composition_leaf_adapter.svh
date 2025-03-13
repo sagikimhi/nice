@@ -22,6 +22,15 @@ extends IMP_T implements composite;
     // Group: Identification Interface
     // ---------------------------------------------------------------------------
 
+    // Function: uid
+    //
+    // See <misc::uid_object::uid()>.
+    //
+    virtual function int
+    uid();
+        return this.m_uid.uid();
+    endfunction
+
     // Function: uuid
     //
     // See <patterns::composite::uuid()>.
