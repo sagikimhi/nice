@@ -1,0 +1,31 @@
+#!/bin/bash
+
+for file in "$@"; do
+    cmd="verible-verilog-format \\
+        --column_limit 79 \\
+        --wrap_spaces 3 \\
+        --indentation_spaces 3 \\
+        --assignment_statement_alignment flush-left \\
+        --case_items_alignment flush-left \\
+        --class_member_variable_alignment flush-left \\
+        --distribution_items_alignment align \\
+        --enum_assignment_statement_alignment align \\
+        --formal_parameters_alignment flush-left \\
+        --formal_parameters_indentation wrap \\
+        --module_net_variable_alignment flush-left \\
+        --named_parameter_alignment flush-left \\
+        --named_parameter_indentation wrap \\
+        --named_port_alignment flush-left \\
+        --named_port_indentation wrap \\
+        --port_declarations_alignment flush-left \\
+        --port_declarations_indentation wrap \\
+        --struct_union_members_alignment flush-left \\
+        --port_declarations_right_align_unpacked_dimensions \\
+        --compact_indexing_and_selections \\
+        --try_wrap_long_lines \\
+        --expand_coverpoints \\
+        --inplace \\
+        --verbose"
+    cmd="$cmd $file"
+    eval "$cmd"
+done
