@@ -1,0 +1,67 @@
+define help_targets =
+
+==============================================================================
+Targets
+==============================================================================
+
+sim                       Unconditionally re-run the simulator
+docs                      Build source documentation with naturaldocs
+clean                     Remove build and simulation artefacts
+format                    Format all verilog sources using verible formatter
+regression                Run simulator when dependencies have changes
+help                      Print this help text (default)
+endef
+
+
+define help_variables =
+
+==============================================================================
+Variables
+==============================================================================
+
+Docs
+----
+DOCS_TITLE                Optional title for the documentation homepage
+DOCS_SUBTITLE             Optional subtitle for the documentation homepage
+
+Cocotb
+------
+TOPLEVEL                  Instance in the hierarchy to use as the DUT
+MEMCHECK                  HTTP port to use for debugging Python memory usage
+RANDOM_SEED               Random seed, to recreate a previous test stimulus
+COCOTB_ATTACH             Pause time value in seconds before the simulator start
+COCOTB_LOG_LEVEL          Configure logging verbosity level (default: INFO)
+COCOTB_RESOLVE_X          How to resolve X, Z, U, W on integer conversion
+COCOTB_ANSI_OUTPUT        Force cocotb to print or not print in color
+COCOTB_REDUCED_LOG_FMT    Display log lines shorter
+COCOTB_ENABLE_PROFILING   Performance analysis of the Python portion of cocotb
+
+Simulation
+----------
+GUI                       Set this to 1 to enable the GUI mode in the simulator
+SIM                       Selects which simulator Makefile to use
+WAVES                     Enable wave traces dump for Riviera-PRO and Questa
+VERILOG_SOURCES           A list of the Verilog source files to include
+VHDL_SOURCES              A list of the VHDL source files to include
+VHDL_SOURCES_<lib>        VHDL source files to include in *lib* (GHDL/NVC/ModelSim/Questa/Xcelium/Incisive/Riviera-PRO only)
+VHDL_LIB_ORDER            Compilation order of VHDL libraries (needed for NVC/ModelSim/Questa/Xcelium/Incisive/Riviera-PRO)
+SIM_CMD_PREFIX            Prefix for simulation command invocations
+COMPILE_ARGS              Arguments to pass to compile (analysis) stage of simulation
+SIM_ARGS                  Arguments to pass to execution of compiled simulation
+EXTRA_ARGS                Arguments for compile and execute phases
+PLUSARGS                  Plusargs to pass to the simulator
+COCOTB_HDL_TIMEUNIT       Default time unit for simulation
+COCOTB_HDL_TIMEPRECISION  Default time precision for simulation
+CUSTOM_COMPILE_DEPS       Add additional dependencies to the compilation target
+CUSTOM_SIM_DEPS           Add additional dependencies to the simulation target
+SIM_BUILD                 Define a scratch directory for use by the simulator
+SCRIPT_FILE               Simulator script to run (for e.g. wave traces)
+
+Regression Manager
+------------------
+MODULE                    Modules to search for test functions (comma-separated)
+TESTCASE                  Test function(s) to run (comma-separated list)
+COVERAGE                  Report Python coverage (also HDL for some simulators)
+COCOTB_RESULTS_FILE       File name for xUnit XML tests results
+COCOTB_PDB_ON_EXCEPTION   Drop into the Python debugger (pdb) on exception
+endef
